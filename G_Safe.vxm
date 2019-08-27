@@ -1,0 +1,350 @@
+<?xml version="1.0" ?>
+<vTask>
+<step>
+	<action>Set Variable</action>
+	<text>1277,747</text>
+	<output value="%Start_Search">Variable</output>
+</step>
+<step>
+	<action>Set Variable</action>
+	<text>1815,1054
+</text>
+	<output value="%Stop_Search">Variable</output>
+</step>
+<step>
+	<action>Label</action>
+	<text>START PREPARE</text>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\StartBattle.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>1</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>1</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>END IF</action>
+</step>
+<step>
+	<action>Label</action>
+	<text>START FARM</text>
+</step>
+<step>
+	<action>Wait for Image</action>
+	<text>G_Victory.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>60</value4>
+	<timeout>4</timeout>
+	<onfail value="LOSE CHECK" image="0" log="0">Jump to Label</onfail>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>G_Victory.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>2</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>G_Victory.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>2</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>Increment Variable</action>
+	<output value="%Total">Variable</output>
+</step>
+<step>
+	<action>Increment Variable</action>
+	<output value="%Win">Variable</output>
+</step>
+<step>
+	<action>IF Image is Visible</action>
+	<text>IMG\BlueRune.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\sell.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Wait for Image</action>
+	<text>IMG\SellRune.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>60</value4>
+	<timeout>2</timeout>
+	<onfail value="LOSE CHECK" image="0" log="0">Jump to Label</onfail>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\SellRune.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>ELSE</action>
+	<indents>1</indents>
+</step>
+<step>
+	<action>Wait for Image</action>
+	<text>IMG\WinOK.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>4</timeout>
+	<onfail value="START FARM" image="0" log="0">Jump to Label</onfail>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\WinOK.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>END IF</action>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>2</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>IF Image is Visible</action>
+	<text>IMG\Replay.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\Replay.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail value="3" image="0" log="0">Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>1</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>END IF</action>
+</step>
+<step>
+	<action>IF Image is Visible</action>
+	<text>IMG\RechargeAsk.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+</step>
+<step>
+	<action>GOTO Label</action>
+	<text>BUY ENERGY</text>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>ELSE</action>
+	<indents>1</indents>
+</step>
+<step>
+	<action>GOTO Label</action>
+	<text>START FARM</text>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>END IF</action>
+</step>
+<step>
+	<action>Label</action>
+	<text>BUY ENERGY</text>
+</step>
+<step>
+	<action>IF Image is Visible</action>
+	<text>IMG\RechargeAsk.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+</step>
+<step>
+	<action>Play Sound</action>
+	<text>YLB.wav</text>
+	<options>Synchronous</options>
+	<indents>1</indents>
+</step>
+<step>
+	<action>END IF</action>
+	<status>0x2</status>
+</step>
+<step>
+	<action>Label</action>
+	<text>LOSE CHECK</text>
+</step>
+<step>
+	<action>Wait for Image</action>
+	<text>IMG\ReviveAsk.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>80</value4>
+	<timeout>1</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\ReviveNo.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>80</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Wait for Image</action>
+	<text>G_Defeated.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>60</value4>
+	<timeout>1</timeout>
+	<onfail value="START FARM" image="0" log="0">Jump to Label</onfail>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>G_Defeated.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>1</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>G_Defeated.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail value="START FARM" image="0" log="0">Jump to Label</onfail>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>1</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>Click on Image</action>
+	<text>IMG\Prepare.bmp</text>
+	<options>Snap to Position</options>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>70</value4>
+	<timeout>2</timeout>
+	<onfail value="START FARM" image="0" log="0">Jump to Label</onfail>
+</step>
+<step>
+	<action>Increment Variable</action>
+	<output value="%Total">Variable</output>
+</step>
+<step>
+	<action>Increment Variable</action>
+	<output value="%Loss">Variable</output>
+</step>
+<step>
+	<action>Delay</action>
+	<timeout>1</timeout>
+	<indents>1</indents>
+</step>
+<step>
+	<action>IF Image is Visible</action>
+	<text>IMG\RechargeAsk.bmp</text>
+	<value1>16</value1>
+	<value2>%Start_Search</value2>
+	<value3>%Stop_Search</value3>
+	<value4>80</value4>
+</step>
+<step>
+	<action>GOTO Label</action>
+	<text>BUY ENERGY</text>
+	<onfail>Ignore/Continue</onfail>
+</step>
+<step>
+	<action>END IF</action>
+</step>
+<step>
+	<action>GOTO Label</action>
+	<text>START PREPARE</text>
+	<onfail>Ignore/Continue</onfail>
+</step>
+</vTask>
