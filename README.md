@@ -16,4 +16,5 @@ As I said earlier vTask doesn't required coding skill. By draging "Action" to yo
 Of course using screen mirroring is not neceserry, there are plenty of way to access games like running Androids emulator like nox or Bluestack. In this case I decide to use screen mirroring program called Mobizen beacuse it doesn't require too much RAM which is good for lower spec PC. Connecting your phone with mobizen is quite easy you can use your USB cable or connect your phone to the same Wi-Fi as your PC that running script. The only thing you need is to lunch your app and click one button to automate farming process. 
 
 ## Note 
-This project was made only for Academic purpose. Usage of this program could lead to deleting users account due to terms of the contract. 
+This project was made only for Academic purpose. Usage of this program could lead to deleting users account due to terms of the contract.
+It is fun project to make that allows you to finding bugs and improving your code through gaming but for gaming industry bots are strictly prohibited. 
